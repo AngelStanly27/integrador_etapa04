@@ -23,15 +23,15 @@ const TablaFila = ({producto, productoAEliminar}) => {
     <tr>
       <td>{producto.nombre}</td>
       <td>{producto.precio}</td>
-      <td>{producto.stock}</td>
+      <td id="no_mostar">{producto.stock}</td>
       <td>{producto.marca}</td>
-      <td>{producto.categoria}</td>
+      <td id="no_mostar">{producto.categoria}</td>
 
       <td>
         <img src={producto.foto} alt={producto.nombre} className="img-row" />
       </td>
       
-      <td>{producto.envio? 'Si':'No'}</td>
+      <td id="no_mostar">{producto.envio? 'Si':'No'}</td>
       
       <td id="elim-comprar">
         <button className="para-button" onClick={() => handleEditar(producto)}>Editar</button>

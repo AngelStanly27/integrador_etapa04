@@ -11,7 +11,7 @@ const Carrito = () => {
   return (
     <>
       <h1>Productos en el Carrito</h1>
-      <hr />
+      
       <ListadoCarrito/>
     </>
   )

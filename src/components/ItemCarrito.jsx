@@ -20,7 +20,7 @@ const ItemCarrito = ({producto}) => {
   return (
     <tr>
             <td><img src={producto.foto} alt={producto.nombre}
-            width="51px"/></td>
+            className="img-row"/></td>
 
             <td>{producto.nombre}</td>
 

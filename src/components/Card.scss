@@ -83,15 +83,11 @@
             padding-bottom: 1rem;
       }
 
-    //     height: 200px;
-    //     background-color: blue;
-    //     overflow: hidden;
-    //     clip-path: polygon(0 0, 100% 0, 100% 200px, 0 180px); /* Estado inicial */
-     
-
-    //skew(0) (2deg)
-        
-    //     clip-path: polygon(0 0, 100% 0, 100% 190px, 0 200px); /* Estado final */
+      @media (max-width: 768px){
+        width: 12.7rem;
+        max-width: 300px;
+        height: 36rem;
+    }
 }
 #precioTxt{
 //    text-align: center;
@@ -121,6 +117,9 @@
     border-radius: 12px;    
     background-color: var(--azul-oscuro);
     box-shadow: 1px 1px 5px 2px  var(--letras-body);
+    @media (max-width: 768px){
+        width: 8rem;
+    }
 }
 
     // /* ----------------------------------------- */

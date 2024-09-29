@@ -20,9 +20,7 @@
   padding: 0;
   box-sizing: border-box;
 
-    @media (max-width: 768px){
-      box-sizing: unset;
-    }
+   
 
 }
 
@@ -56,9 +54,19 @@ body {
 }
 h1{
     text-align: center;
-    padding-top: 3rem;
+    margin-top: 3rem;
     font-size: 2.3rem;
     font-weight: 600;
+
+    @media (max-width: 650px){
+        font-size: 1.7rem;
+        color: white;
+        border: 1px solid var(--azul-oscuro);
+        background-color: var(--azul-oscuro);
+        border-radius: 7px;
+        box-shadow: 0px 2px 5px 0px rgba(0 ,0 ,0 ,0.3);
+        
+    }
 }
 
 a.nav-bar__nav-link:link{
@@ -119,6 +127,7 @@ a.nav-bar__nav-link:link{
     color: #003399;
     font-weight: 900;
     text-shadow: 1px 1px 5px  var(--azul-oscuro);
+    
 }
 .year-parr{
     font-size: 1.1em;
@@ -126,11 +135,15 @@ a.nav-bar__nav-link:link{
     text-transform: initial;
     text-decoration: underline;
 }
+
 .historia__year p{
     text-align: justify;
+    @media (max-width: 650px){
+        margin: 0 1rem;
+    }
 }
 .modelo__caracter{
-    @media (max-width: 768px){
+    @media (max-width: 650px){
         font-size: 1.3rem;
     }
 }

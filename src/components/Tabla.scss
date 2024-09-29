@@ -12,7 +12,13 @@ table.tabla-alta {
         border-radius: 0px;
         text-align: center;
         display: table-cell;
+        @media (max-width: 650px){
+          width: 4.5rem;
+      }
     }
+    @media (max-width: 650px){
+      width: 95%;
+  }
 }
 #elim-comprar{
   display: flex;
@@ -20,4 +26,12 @@ table.tabla-alta {
 }
 #elim-comprar button{
   width: 7rem;
+    @media (max-width: 650px){
+    width: 5.5rem;
+    }
+}
+#no_mostar{
+  @media (max-width: 768px){
+    display: none;
+}
 }

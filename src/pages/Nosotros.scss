@@ -10,6 +10,9 @@
             width: 42rem;
             height: 30rem;
         }
+        @media (max-width: 650px){
+            width: 95%;
+        }
 }
 
 .historia{
@@ -68,6 +71,9 @@ logo-nos{
                 width: 42.3rem;
                 margin: 0;
             }
+            @media (max-width: 650px){
+                width: 95%;
+            }
         }
         &__empresas{
          display: flex;
@@ -77,6 +83,9 @@ logo-nos{
             @media (max-width: 768px){
                 width: 42.3rem;
                 margin: 0;
+            }
+            @media (max-width: 650px){
+                width: 95%;
             }
     }
 }

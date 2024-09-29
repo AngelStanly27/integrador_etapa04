@@ -7,8 +7,9 @@ const Contacto = () => {
   useTitulo('Contacto')
 
   return (
-    <><div className="contacto">
+    <>
       <h1>Contacto</h1>
+      <div className="contacto">
 
       <nav className="contacto__num">
         <p>Tienda</p>
