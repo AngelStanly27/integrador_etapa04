@@ -1,18 +1,15 @@
 import { createContext, useEffect, useState } from "react";
-import { helperPeticioneshttp } from '../helpers/helperPeticioneshttp';
+import { helperPeticioneshttp } from "../helpers/helperPeticioneshttp";
 
-
-
+// ! CREANDO CONTEXTO
+// ! 1. Creamos el contexto
 const ProductosContext = createContext()
-
-
+// ! 2. Armamos el provider
 const ProductosProvider = ( { children} ) => {
     const url = import.meta.env.VITE_BACKEND_PRODUCTOS
-
-    const [productos, setProductos] = useState('')
-
+    const [productos, setProductos] = useState(null)
     const [productoAEditar, setProductoAEditar] = useState(null)
-    
+
     useEffect(() => {
         getAllProductos()
     }, [])
@@ -21,8 +18,9 @@ const ProductosProvider = ( { children} ) => {
 
         try {
 
-            const prods = await helperPeticioneshttp(url, null)
+            const prods = await helperPeticioneshttp(url, {})
 
+            // console.log(prods)
             setProductos(prods)
             
         } catch (error) {
@@ -43,7 +41,7 @@ const ProductosProvider = ( { children} ) => {
 
             const newProducto = await helperPeticioneshttp(url, options)
 
-            // console.log(newProducto     este es el qe se uas para hacer el array)
+            // console.log(newProducto)
 
             setProductos([...productos, newProducto])
             
@@ -61,52 +59,48 @@ const ProductosProvider = ( { children} ) => {
                 method: 'PUT',
                 headers: { 'content-type' : 'application/json' },
                 body: JSON.stringify(productoEditado)
-
             }
 
-            const urlEdicion = url + productoEditado.id 
-            console.log(urlEdicion)
-            const editedProduct = await helperPeticioneshttp(urlEdicion, options)
+            const urlEdicion = url + `/${productoEditado.id}` 
+            // console.log('este es el url+id',urlEdicion)
 
-            const nuevoEstadoProductos = productos.map((producto) =>
-                 producto.id === editedProduct.id ? editedProduct : producto
+
+            const editedProduct = await helperPeticioneshttp(urlEdicion, options)
+            // console.log(editedProduct)
+
+            const nuevoEstadoProductos = productos.map( 
+                producto => producto.id === editedProduct.id ? editedProduct : producto
             )
-            console.log(nuevoEstadoProductos)
             setProductos(nuevoEstadoProductos)
             
         } catch (error) {
             console.error('[actualizarProductoContext]', error)
         }
-
+        
     }
-
     const productoAEliminar = async (id) => {
-        const urlEliminar = url + id;
+        const urlEliminar = url + `/${id}`
+        // console.log('este es url +id', urlEliminar)
         try {
     
           const options = {
             method: "DELETE",
           };
     
-          const res = await helperPeticioneshttp(urlEliminar, options);
+          await helperPeticioneshttp(urlEliminar, options);
     
-          if (!res.ok) {
-            throw new Error(`no se borra el producto ${res.status}`);
-          }
-          const dataElimino = await res.json();
           
-          
-          const data = {
-            id: id,
-            producto: dataElimino
-          }
+        
     
-          const nuevoEstadoProducto = productos.filter(
-            (prod) => prod.id !== id
-          );
-          setProductos(nuevoEstadoProducto);
-        } catch (error) {}
-      }
+          const EstadoProducto = productos.filter(
+            (prod) => prod.id !== id);
+          setProductos(EstadoProducto);
+          
+          }catch (error) {
+            console.error('[productoAEliminar]',error)
+          }
+        }
+
 
     const data = {
         productos,

@@ -1,4 +1,5 @@
-[
+{
+  "productos":[
     {
       "url": "/split",
       "nombre": "Aire Acondicionado Split ",
@@ -119,4 +120,4 @@
       "marca": "LG",
       "precio": 666.6
     }
-  ]
+  ]}

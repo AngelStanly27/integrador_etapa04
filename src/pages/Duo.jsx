@@ -16,13 +16,13 @@ const Split = () => {
   
         <ul className="three__caption" >
          
-            <img src="./public/img/duo-split.webp"   className="three__photo" alt="Aire Acondicionado Split uno" />
+            <img src="/img/duo-split.webp"   className="three__photo" alt="Aire Acondicionado Split uno" />
         </ul>
         <ul className="three__caption">
-            <img src="./public/img/duo-splits.webp" className="three__photo" alt="Aire Acondicionado Split tres" />
+            <img src="/img/duo-splits.webp" className="three__photo" alt="Aire Acondicionado Split tres" />
          </ul>
         <ul className="three__caption">
-             <img src="./public/img/duo-spli.webp" className="three__photo" alt="Aire Acondicionado Split cuatro" />
+             <img src="/img/duo-spli.webp" className="three__photo" alt="Aire Acondicionado Split cuatro" />
          </ul>
   </div>
   {/* ))} */}

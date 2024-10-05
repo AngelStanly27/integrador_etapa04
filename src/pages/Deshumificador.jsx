@@ -15,13 +15,13 @@ const Split = () => {
     <div className="three"  >
         <ul className="three__caption" >
          
-            <img src="./public/img/deshumificador.webp"   className="three__photo" alt="Aire Acondicionado Split uno" />
+            <img src="/img/deshumificador.webp"   className="three__photo" alt="Aire Acondicionado Split uno" />
         </ul>
         <ul className="three__caption">
-            <img src="./public/img/deshumi-dos.webp" className="three__photo" alt="Aire Acondicionado Split tres" />
+            <img src="/img/deshumi-dos.webp" className="three__photo" alt="Aire Acondicionado Split tres" />
          </ul>
         <ul className="three__caption">
-             <img src="./public/img/deshumi-tres.webp" className="three__photo" alt="Aire Acondicionado Split cuatro" />
+             <img src="/img/deshumi-tres.webp" className="three__photo" alt="Aire Acondicionado Split cuatro" />
          </ul>
   </div>
   {/* ))} */}

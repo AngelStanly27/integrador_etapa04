@@ -18,7 +18,7 @@ const Card = ({producto}) => {
     // <div className="cards-container" id="contenedor-cards"></div>
     <div className="card">
         <article className="card__article">
-            <NavLink to={producto.url} >
+            <NavLink to={producto.url} target='_parent'>
             <div className="card__image-container">
             <img src={producto.foto} alt={producto.nombre} className="card__image" />
             </div></NavLink>

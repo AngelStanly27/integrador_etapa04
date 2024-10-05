@@ -14,7 +14,7 @@ const Nosotros = () => {
       <div className="historia__year">
         <p className="year-parr">Desde 1988.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab velit eveniet ducimus repellat dignissimos. Dolorem aperiam maxime nobis nostrum consequuntur voluptatibus provident expedita beatae ratione, fugit culpa optio quo blanditiis.
-        Facilis quas facere, nostrum minima rerum vero asperiores temporibus dolorem quasi eveniet esse sint vitae sunt maiores explicabo magni labore molestiae obcaecati fuga repellat dolores cupiditate quod! At, modi consequatur?</p>
+        Facilis quas facere,  esse sint vitae sunt maiores explicabo magni labore molestiae obcaecati fuga repellat dolores cupiditate quod! At, modi consequatur?</p>
        </div>
        <div className="historia__log-nos">
         <img src="/img/logo.png"  className="logo-nos" alt="aire acondicionado logo" />
@@ -23,7 +23,7 @@ const Nosotros = () => {
      </div>
     
      <div className="portada-ds">
-      <img src="/public/img/portada-dos.webp" className="portada-dos"  alt="portada-dos" />
+      <img src="/img/portada-dos.webp" className="portada-dos"  alt="portada-dos" />
     </div>
      
     <div className="para">

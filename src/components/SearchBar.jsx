@@ -10,8 +10,10 @@ const SearchBar = () => {
   const{carrito, vaciarCarrito, guardarCarrito} =useContext(CarritoContext)
 
   const handleComprar = () =>{
-    console.log('Comprando en el carrito')
+    //Compra todos los productos en el Holder
+    
     guardarCarrito(carrito)
+    vaciarCarrito()
    } 
 
    const handleLimpiarCarrito = () =>{

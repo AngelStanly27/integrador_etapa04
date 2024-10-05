@@ -43,13 +43,13 @@ const Split = () => {
     <div className="three"  >
         <ul className="three__caption" >
          
-            <img src="./public/img/split-uno.webp"   className="three__photo" alt="Aire Acondicionado Split uno" />
+            <img src="/img/split-uno.webp"   className="three__photo" alt="Aire Acondicionado Split uno" />
         </ul>
         <ul className="three__caption">
-            <img src="./public/img/split-tres.webp" className="three__photo" alt="Aire Acondicionado Split tres" />
+            <img src="/img/split-tres.webp" className="three__photo" alt="Aire Acondicionado Split tres" />
          </ul>
         <ul className="three__caption">
-             <img src="./public/img/split-cuatro.webp" className="three__photo" alt="Aire Acondicionado Split cuatro" />
+             <img src="/img/split-cuatro.webp" className="three__photo" alt="Aire Acondicionado Split cuatro" />
          </ul>
   </div>
   <div className="detalles">

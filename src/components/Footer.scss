@@ -19,6 +19,9 @@ footer{
         @media (max-width: 768px){
             width: 11rem;
         }
+        @media (max-width: 650px){
+            display: none;
+        }
     }
 
     &__avisos{
@@ -26,6 +29,11 @@ footer{
         flex-direction: column;
         justify-content: space-between;
         align-self: stretch;
+
+        @media (max-width: 400px){
+        flex-direction: row;
+        margin: 1rem 1rem 0 1rem;
+        }
     }
     &__inicio{
         display: flex;
@@ -33,6 +41,10 @@ footer{
         justify-content: space-between;
         align-self: stretch;
 
+        @media (max-width: 400px){
+        flex-direction: row;
+        margin: 0 1rem 0 1rem;
+        }
     }
     
     &__nota{
@@ -41,5 +53,14 @@ footer{
             @media (max-width: 768px){
                 width: 10.5rem;
             }
+            @media (max-width: 400px){
+                width: auto;
+                margin: 1rem 1rem 0 1rem ;
+
+            }
+    }
+
+    @media (max-width: 400px){
+        flex-direction: column;
     }
 } 

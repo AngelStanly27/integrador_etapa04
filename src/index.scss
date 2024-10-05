@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+// @import 'bootstrap';
 
 
 :root {
@@ -36,7 +37,6 @@ main{
 
 .section-cards {
     background-color: rgb(255, 255, 255);
-    padding: 1rem;
 }
 
 .cards-container {
@@ -60,11 +60,10 @@ h1{
 
     @media (max-width: 650px){
         font-size: 1.7rem;
-        color: white;
-        border: 1px solid var(--azul-oscuro);
-        background-color: var(--azul-oscuro);
+        color: var(--azul-oscuro);
         border-radius: 7px;
-        box-shadow: 0px 2px 5px 0px rgba(0 ,0 ,0 ,0.3);
+        text-shadow: 1px 1px 3px  var(--azul-black);
+        margin-top: 1.5rem;
         
     }
 }
@@ -111,6 +110,9 @@ a.nav-bar__nav-link:link{
     color: var(--azul-claro);
     font-size: 1.5em;
     text-transform: capitalize;
+    @media (max-width: 400px){
+        font-size: 1.1em;
+    }
 }
 .detalles h3{
     color: var(--azul-claro);
@@ -139,12 +141,15 @@ a.nav-bar__nav-link:link{
 .historia__year p{
     text-align: justify;
     @media (max-width: 650px){
-        margin: 0 1rem;
+        margin: 0.5rem 1rem 0 1rem;
     }
 }
 .modelo__caracter{
     @media (max-width: 650px){
         font-size: 1.3rem;
+    }
+    @media (max-width: 400px){
+        font-size: 1rem;
     }
 }
 
@@ -160,15 +165,15 @@ footer{
     color: var(--letras-footer); 
 }
 a.food__link:link{
-   color: var(--letras-footer);  
+   color: var(--azul-oscuro);  
    text-decoration: none;
 }
 a.food__link:visited{
     background: var(--marron); 
 }
 a.food__link:hover{
-    color:  var(--letras-footer);
+    color:  var(--azul-oscuro);
 }
 a.food__link:visited{
-    color:  var(--letras-footer);
+    color:  var(--portada-oscuro);
 }

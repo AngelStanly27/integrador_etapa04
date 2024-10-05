@@ -7,9 +7,12 @@ const ItemCarrito = ({producto}) => {
 
     const {carrito, eliminarCarritoContext, guardarCarrito} = useContext(CarritoContext)
 
-    const handleComprar = () =>{
-      console.log('Comprando en el carrito')
+    const handleComprar = (id) =>{
+      //comprra el Articulo deseado
+
       guardarCarrito(carrito)
+      eliminarCarritoContext(id)
+
   
     }
 
@@ -22,7 +25,7 @@ const ItemCarrito = ({producto}) => {
             <td><img src={producto.foto} alt={producto.nombre}
             className="img-row"/></td>
 
-            <td>{producto.nombre}</td>
+            <td id="no_mostar">{producto.nombre}</td>
 
             <td>
               <button> - </button>

@@ -6,6 +6,10 @@
             gap: 1rem;
             padding-top: 2rem;
         }
+        @media (max-width: 650px){
+            flex-direction: column;
+            padding: 1rem 1rem 01rem ;
+        }
     &__num{
         padding: 1rem 1.5rem;
         border: 2px solid var(--azul-oscuro);  
@@ -34,7 +38,11 @@ hr{
 }
 #h2-cont{
     text-align: center;
-    padding: 2rem 0 0 3rem;
+    margin: 2rem 0 0 3rem;
+    
+    @media (max-width: 650px){
+        margin: .7rem .5rem;
+    }
 }
 // formulario
 .form{
@@ -51,6 +59,10 @@ hr{
         width: 28rem;
         justify-content: space-between; 
         padding: 0.5rem 0;
+
+        @media (max-width: 650px){
+            width: 16rem;
+        }
         
     }
     &__label{
@@ -60,6 +72,11 @@ hr{
         display: block;
         color: var(--azul-oscuro);
         
+    }
+    &__input{
+        @media (max-width: 650px){
+            width: 10.3rem;    
+        }
     }
     &__enviar{
        display: block;
@@ -73,6 +90,17 @@ hr{
        transition: 0.5s;
        color: var(--letras-footer);
        cursor: pointer;
+
+       @media (max-width: 650px){
+        padding: 1rem 1.5rem;
+       }
+
+       @media (max-width: 400px){
+        padding: .7rem;
+        }
+    }
+    @media (max-width: 400px){
+        padding: 1rem;
     }
 }
 // Horario
@@ -124,4 +152,9 @@ hr{
     display: flex;
     justify-content: space-around;
     padding-bottom: 1rem;
+
+    @media (max-width: 400px){
+        width: auto;
+        gap: .7rem;
+    }
 }

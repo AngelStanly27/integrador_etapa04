@@ -20,8 +20,11 @@
 }
 
 .cards-container{
-    padding-top: 3rem;
     padding-bottom: 3rem;
+    padding-top: 3rem;
+    @media (max-width: 650px){
+        padding: 1.5rem 0;
+    }
 }
 
 .card {
@@ -43,6 +46,11 @@
     &:focus {
         
         box-shadow: 0px 7px 8px 0px rgba(0 ,0 ,0 ,0.5);
+
+        @media (max-width: 400px){
+            box-shadow: 0px 7px 8px 0px transparent;
+
+        }
     }
     
     &__image {
@@ -57,6 +65,11 @@
         &:focus {
         
         box-shadow: 0px 7px 8px 0px var(--azul-oscuro);
+
+        // @media (max-width: 400px){
+        //  width: 60%;
+        //  height: 70%;
+        // }
     }
     
     }
@@ -73,20 +86,30 @@
         &:hover{
             transform: scale(1.15);
 
+            @media (max-width: 400px){
+                width: 0;
+            }
+
         }
       }
       &__heading{
        
             text-align: center;
+            font-size: 1rem;
             color: black;
             padding-top: 1.5rem;
             padding-bottom: 1rem;
+            @media (max-width: 650px){
+                padding-top: 1rem;
+                padding-bottom: 0;
+            }
+
       }
 
-      @media (max-width: 768px){
-        width: 12.7rem;
-        max-width: 300px;
-        height: 36rem;
+      @media (max-width: 650px){
+        width: 7.2rem;
+        max-width: 250px;
+        height: 39.5rem;
     }
 }
 #precioTxt{
@@ -118,7 +141,7 @@
     background-color: var(--azul-oscuro);
     box-shadow: 1px 1px 5px 2px  var(--letras-body);
     @media (max-width: 768px){
-        width: 8rem;
+        width: 7rem;
     }
 }
 

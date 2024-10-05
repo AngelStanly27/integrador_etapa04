@@ -9,9 +9,10 @@ const ListadoCarrito = () => {
   const{carrito, vaciarCarrito, guardarCarrito} =useContext(CarritoContext)
 
   const handleComprar = () =>{
-    console.log('Comprando en el carrito')
+      // Compra todos los productos en la pag del CARRito
+    
     guardarCarrito(carrito)
-
+    vaciarCarrito()
   }
 
   const handleLimpiarCarrito = () =>{
@@ -27,10 +28,10 @@ const ListadoCarrito = () => {
         <thead>
                 <tr>
                     <th className="nav-bar__nav-link">Foto</th>
-                    <th className="nav-bar__nav-link">Nombre</th>
+                    <th className="nav-bar__nav-link" id="no_mostar">Nombre</th>
                     <th className="nav-bar__nav-link">Cantidad</th>
                     <th className="nav-bar__nav-link">Precio</th>
-                    <th className="nav-bar__nav-link">Acciones</th>
+                    <th className="nav-bar__nav-link">Acción</th>
                 </tr>
         </thead>
 
@@ -53,8 +54,8 @@ const ListadoCarrito = () => {
     {!carrito.length <= 0 && (
 
         <>
-             <button onClick={handleLimpiarCarrito}>Vaciar Todo El Carrito</button>
-             <button onClick={handleComprar}>Comrpar</button>
+             <button className="form__enviar" onClick={handleLimpiarCarrito}>Vaciar Todo El Carrito</button>
+             <button className="form__enviar"onClick={handleComprar}>Comrpar Todo el Carrito</button>
 
         </>
     )}
